@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RWD Demo Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    .box>p{
+      font-size: 1em;
+    }
+
+    .header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: space-between;
+    }
+
+    .box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+      width: calc(33.33% - 45px);
+    }
+
+  /* 響應式調整 */
+	/* small devices (phones, 768px and down) */
+	@media screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    .box {
+      width: 100%;
+      background-color:blue;
+    }
+  }
+	
+	/* Medium devices (landscape tablets, 768px to 991px) */
+	@media only screen and (min-width: 768px) and (max-width: 991px) {
+	  .container {
+	    padding: 15px;
+	  }
+	  .box {
+	    width: calc(50% - 45px);
+		  background-color:green;
+	  }
+	}
+	
+	/* Large devices (laptops/desktops, 992px to 1199px) */
+	@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	  .container {
+	    padding: 15px;
+	  }
+	  .box {
+	    width: calc(33.33% - 45px);
+		  background-color:yellow;
+	  }
+    .box > p{
+      font-size: 1.5em;
+    }
+	}
+	
+	/* Extra large devices (large laptops and desktops, 1200px and up) */
+	@media only screen and (min-width: 1200px) {
+    .box {
+	    width: calc(25% - 45px);
+		  background-color:red;
+	  }
+    .box > p{
+      font-size: 2em;
+    }
+	}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Responsive Web Page</h1>
+  </div>
+  <div class="container">
+    <div class="box">
+      <h2>Box 1</h2>
+      <p>This is a responsive box.</p>
+    </div>
+    <div class="box">
+      <h2>Box 2</h2>
+      <p>This is another responsive box.</p>
+    </div>
+    <div class="box">
+      <h2>Box 3</h2>
+      <p>Yet another responsive box.</p>
+    </div>
+	  <div class="box">
+      <h2>Box 4</h2>
+      <p>Yet another responsive box.</p>
+    </div>
+    <div>
+      <p>*隨著裝置大小會更換 box 背景顏色&字體大小</p>
+    </div>
+  </div>
+</body>
+</html>
